@@ -35,7 +35,7 @@ void Si4703_Breakout::setChannel(int channel)
         //Freq(MHz) = 0.200(in USA) * Channel + 87.5MHz
         //97.3 = 0.2 * Chan + 87.5
         //9.8 / 0.2 = 49
-        int newChannel = channel * 10; //973 * 10 = 9730
+        int newChannel = channel; // do not increment for more ability to tune it.
         newChannel -= 8750; //9730 - 8750 = 980
         newChannel /= 10; //980 / 10 = 98
 

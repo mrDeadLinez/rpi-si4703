@@ -27,7 +27,7 @@ int main()
         Si4703_Breakout radio(resetPin, sdaPin);
         radio.powerOn();
         radio.setVolume(5);
-        radio.setChannel(1040); //FM4 104.0Mhz (Austria)
+        radio.setChannel(1027); //FM4 102.7Mhz (Austria)
 
         char rdsBuffer[10] = {0};
         radio.readRDS(rdsBuffer, 15000); //timeout 15sec
